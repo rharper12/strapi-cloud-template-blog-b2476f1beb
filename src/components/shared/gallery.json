@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_galleries",
+  "info": {
+    "displayName": "Gallery",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

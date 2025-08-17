@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_about_cards",
+  "info": {
+    "displayName": "about_card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
