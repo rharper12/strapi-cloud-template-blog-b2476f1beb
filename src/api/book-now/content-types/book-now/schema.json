@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "book_nows",
+  "info": {
+    "singularName": "book-now",
+    "pluralName": "book-nows",
+    "displayName": "Book Now"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "booking_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "form_title": {
+      "type": "string"
+    }
+  }
+}

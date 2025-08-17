@@ -28,6 +28,18 @@ export interface SharedGallery extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHeroBanner extends Struct.ComponentSchema {
+  collectionName: 'components_shared_hero_banners';
+  info: {
+    displayName: 'hero_banner';
+    icon: 'apps';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -35,6 +47,18 @@ export interface SharedMedia extends Struct.ComponentSchema {
     icon: 'file-video';
   };
   attributes: {};
+}
+
+export interface SharedNavItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_nav_items';
+  info: {
+    displayName: 'nav_item';
+    icon: 'archive';
+  };
+  attributes: {
+    link_name: Schema.Attribute.String;
+    link_path: Schema.Attribute.String;
+  };
 }
 
 export interface SharedQuote extends Struct.ComponentSchema {
@@ -93,7 +117,9 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.about-card': SharedAboutCard;
       'shared.gallery': SharedGallery;
+      'shared.hero-banner': SharedHeroBanner;
       'shared.media': SharedMedia;
+      'shared.nav-item': SharedNavItem;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

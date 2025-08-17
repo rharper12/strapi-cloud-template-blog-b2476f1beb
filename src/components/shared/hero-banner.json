@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_hero_banners",
+  "info": {
+    "displayName": "hero_banner",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
