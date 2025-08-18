@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "communications",
+  "info": {
+    "singularName": "communication",
+    "pluralName": "communications",
+    "displayName": "Communication"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cover_photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "section": {
+      "type": "component",
+      "component": "shared.section",
+      "repeatable": true
+    }
+  }
+}

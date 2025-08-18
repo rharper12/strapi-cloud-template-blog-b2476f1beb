@@ -431,6 +431,37 @@ export interface ApiBookNowBookNow extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCommunicationCommunication extends Struct.SingleTypeSchema {
+  collectionName: 'communications';
+  info: {
+    displayName: 'Communication';
+    pluralName: 'communications';
+    singularName: 'communication';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cover_photo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::communication.communication'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section: Schema.Attribute.Component<'shared.section', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -1004,6 +1035,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::book-now.book-now': ApiBookNowBookNow;
+      'api::communication.communication': ApiCommunicationCommunication;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::navbar.navbar': ApiNavbarNavbar;
       'plugin::content-releases.release': PluginContentReleasesRelease;
