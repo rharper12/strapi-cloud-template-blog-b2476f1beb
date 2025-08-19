@@ -21,15 +21,10 @@
         "audios"
       ]
     },
-    "secondary_image": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "hero_banner": {
+      "type": "component",
+      "component": "shared.background-image",
+      "repeatable": false
     },
     "image_gallery": {
       "type": "dynamiczone",

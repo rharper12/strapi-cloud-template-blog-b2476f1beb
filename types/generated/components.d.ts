@@ -14,6 +14,18 @@ export interface SharedAboutCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBackgroundImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_background_images';
+  info: {
+    displayName: 'backgroundImage';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedGallery extends Struct.ComponentSchema {
   collectionName: 'components_shared_galleries';
   info: {
@@ -128,6 +140,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.about-card': SharedAboutCard;
+      'shared.background-image': SharedBackgroundImage;
       'shared.gallery': SharedGallery;
       'shared.hero-banner': SharedHeroBanner;
       'shared.media': SharedMedia;
